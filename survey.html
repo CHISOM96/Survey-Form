@@ -3,12 +3,133 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Simple Survey Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <h1 id="title">Simple Survey Form</h1>
+    <p id="description">Thank you for taking time out to help us improve our services.</p>
+    <div>
+        <form  id="survey-form">
+            <div class="form-group">
+                <fieldset>
+                    <legend>Personal Details</h3></legend>
+                    <!--title for section of the Survey-->
+                    <div class="form-group">
+                        <label id="name-label" for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label id="email-label" for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label id="number-label" for="number"
+                        >Age<span class="clue">(optional)</span>
+                        </label>
+                        <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age"/>                      </div>
+                    </div>
+                        
+                </fieldset>
+                <fieldset>  
+                        <legend>Usage</h3></legend>
+                        <!--title for section of the Survey-->  
+                            <div class="form-group">                       
+                                <label id="frequency" for="frequency">How many times do you use our service in a month?</label>
+                                    <select id="dropdown" name="frequency" class="form-control" required>
+                                            <option disabled selected value>Select</option>
+                                            <option value="One">One</option>
+                                            <option value="Two">Two</option>
+                                            <option value="Three">Three</option>
+                                            <option value="MoreThan3">More than three</option>
+                                            <option value="preferNo">Prefer not to say</option>                                    
+                                    </select>
+                            </div>     
+                            <form><div id="container">
+                                <label id="rating" for="rating">How satsified are you with our Service?</label>
+                                <div id="left">    
+                                    <label>
+                                        <input type="radio" name="rating" value="happy" required checked>
+                                        <img id="radio" src="https://i.ibb.co/vwdrdnZ/emoticon-square-face-with-a-smile.png">
+                                    </label>
+                                    <figcaption id="caption">Satsified</figcaption>
+                                </div>      
+                                <div id="right">
+                                        <label>
+                                            <input type="radio" name="rating" value="unhappy">
+                                            <img id="radio" src="https://i.ibb.co/D9ZPsbW/bad-emoticon-square-face.png">
+                                        </label>
+                                        <figcaption id="caption">Unhappy</figcaption>
+                                </div>        
+                                <div id="center">
+                                        <label>
+                                            <input type="radio" name="rating" value="indifferent">
+                                            <img id="radio" src="https://i.ibb.co/ysWg04W/emoticon-square-face-with-closed-eyes-and-mouth-of-straight-lines.png " alt="bad-emoticon-square-face">
+                                        </label>
+                                        <figcaption id="caption">Indifferent</figcaption>
+                                </div> 
+                            </div></form>
+                            <div class="form-group">
+                                    <p>
+                                      What would you like to see improved?
+                                      <span class="clue">(Check all that apply)</span>
+                                    </p>
+                              
+                                    <label><input name="prefer" value="delivery-speed" type="checkbox" class="input-checkbox"/>Delivery Speed</label>
+                                    <label>
+                                      <input
+                                        name="prefer"
+                                        value="product-quality"
+                                        type="checkbox"
+                                        class="input-checkbox"
+                                      />Product Quality</label
+                                    >
+                                    <label
+                                      ><input
+                                        name="prefer"
+                                        value="payment-options"
+                                        type="checkbox"
+                                        class="input-checkbox"
+                                      />Payment Options</label
+                                    >
+                                    <label
+                                      ><input
+                                        name="prefer"
+                                        value="customer-service"
+                                        type="checkbox"
+                                        class="input-checkbox"
+                                      />Customer Service</label
+                                    >
+                            </div>
+                            <fieldset>
+                                    <legend>Other comments</h3></legend>
+                                    <!--title for section of the Survey-->
+                                <div class="form-group">
+                                    <p>Any comments or suggestions?</p>
+                                    <textarea
+                                      id="comments"
+                                      class="input-textarea"
+                                      name="comment"
+                                      placeholder="Enter your comment here..."
+                                    ></textarea>
+                                </div>
+                            </fieldset>
+                              
+                            <div class="form-group">
+                            <button type="submit" id="submit" class="submit-button">
+                                Submit
+                            </button>
+                            </div>
+            </div>
+            
+        </form>
+    </div>
+
 </body>
+<footer>
+        <p style="text-align: center;"><em>Coded by Chisom Nnabuihe</a></em></p>
+            <div class="row"><div class="column"><a href="https://twitter.com/Chisom_MN"><img id="footer-img" src="https://i.ibb.co/C9NVMTs/Twitter-2.png" alt="@Chisom_MN"></a></div><div class="column"><a href="https://github.com/CHISOM96"><img id="footer-img" src="https://i.ibb.co/2Z3PZrm/Github-2.png" alt="CHISOM96"></a></div></div>    
+</footer>
 </html>
